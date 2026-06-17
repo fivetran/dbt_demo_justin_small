@@ -1,0 +1,3 @@
+select * from (
+select * from JUSTIN_SMALL.dbt_demo_marts.top_product_reviews order by product_id, product_review_rank
+) as _dbt_show_wrap

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_orders_snowflake_daily_checksums
+    description: >
+      Snowflake-side deterministic reconciliation checksums for fct_orders,
+      grouped by order date and 10,000-order key ranges. Compare these
+      outputs with equivalent SAP-accessible extract aggregates to verify
+      row-level accuracy without relying on native Fivetran hashing.
+    columns:
+      - name: partition_date
+        description: Order date partition used for SAP extract comparison.
+        data_tests: [not_null]
+      - name: key_range_start
+        description: Inclusive lower bound of the order_id key range.
+        data_tests: [not_null]
+      - name: key_range_end
+        description: Inclusive upper bound of the order_id key range.
+        data_tests: [not_null]
+      - name: row_count
+        description: Number of fact rows in the reconciliation slice.
+        data_tests: [not_null]
+      - name: quantity_sum
+        description: Sum of order quantities in the reconciliation slice.
+      - name: revenue_usd_sum
+        description: Sum of revenue_usd in the reconciliation slice.
+      - name: row_hash_agg
+        description: Snowflake HASH_AGG across canonical row payloads.
+      - name: checksum_sha256
+        description: SHA256 checksum of canonical JSON row payloads ordered by order_id.
+        data_tests: [not_null]
+    data_tests:
+      - unique_daily_key_range_checksum_slice:
+          partition_date: partition_date
+          key_range_start: key_range_start
+          key_range_end: key_range_end

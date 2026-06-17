@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table JUSTIN_SMALL.dbt_demo.raw_suppliers (supplier_id integer,supplier_name text,country text,contact_email text,product_id integer)
+  ;
+    -- dbt seed --
+    
+            insert into JUSTIN_SMALL.dbt_demo.raw_suppliers (supplier_id, supplier_name, country, contact_email, product_id) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  

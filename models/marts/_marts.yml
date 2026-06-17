@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: >
+      One row per customer enriched with lifetime order metrics.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: full_name
+        data_tests: [not_null]
+      - name: total_orders
+        description: Count of all orders (any status) placed by this customer.
+      - name: completed_orders
+        description: Count of orders with status = completed.
+      - name: total_revenue_usd
+        description: Sum of revenue from completed orders only.
+      - name: first_order_date
+        description: Date of the customer's earliest order.
+      - name: most_recent_order_date
+        description: Date of the customer's latest order.
+
+  - name: dim_products
+    description: Product catalog with sales performance metrics.
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+      - name: product_name
+        data_tests: [not_null]
+      - name: total_units_sold
+        description: Sum of quantity across completed orders.
+      - name: total_revenue_usd
+        description: Revenue from completed orders for this product.
+
+  - name: fct_orders
+    description: >
+      Grain: one row per order. Central fact table joining
+      orders, customers, and products.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: revenue_usd
+        description: quantity * price_usd for this order line.
+
+  - name: top_product_reviews
+    description: >
+      Top three product reviews per product, ranked by rating, review date,
+      and review id.
+    columns:
+      - name: review_id
+        data_tests: [unique, not_null]
+      - name: product_id
+        data_tests: [not_null]
+      - name: product_review_rank
+        description: Ranking of reviews within each product.
+        data_tests:
+          - accepted_values:
+              values: [1, 2, 3]
+      - name: rating
+        data_tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]

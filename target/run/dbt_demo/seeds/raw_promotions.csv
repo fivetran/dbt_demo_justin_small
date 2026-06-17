@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table JUSTIN_SMALL.dbt_demo.raw_promotions (promo_id integer,code text,discount_pct integer,start_date date,end_date date,is_active boolean)
+  ;
+    -- dbt seed --
+    
+            insert into JUSTIN_SMALL.dbt_demo.raw_promotions (promo_id, code, discount_pct, start_date, end_date, is_active) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

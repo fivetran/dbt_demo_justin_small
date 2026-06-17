@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table JUSTIN_SMALL.dbt_demo.raw_reviews (review_id integer,customer_id integer,product_id integer,order_id integer,rating integer,review_date date)
+  ;
+    -- dbt seed --
+    
+            insert into JUSTIN_SMALL.dbt_demo.raw_reviews (review_id, customer_id, product_id, order_id, rating, review_date) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

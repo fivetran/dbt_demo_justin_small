@@ -1,0 +1,11 @@
+product_id,product_name,category,price_cents,is_active
+1,Wireless Headphones,Electronics,7999,true
+2,Yoga Mat,Fitness,2999,true
+3,Coffee Maker,Kitchen,5499,true
+4,Running Shoes,Apparel,11999,true
+5,Desk Lamp,Home Office,3499,true
+6,Protein Powder,Nutrition,4999,true
+7,Mechanical Keyboard,Electronics,8999,true
+8,Water Bottle,Fitness,1999,true
+9,Notebook Set,Office,1299,true
+10,Smart Watch,Electronics,29999,true

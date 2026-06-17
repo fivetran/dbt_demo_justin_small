@@ -1,0 +1,20 @@
+{
+  "target_dir": "/Users/fivetran/Documents/Fivetran/dbt_demo/target",
+  "fingerprints": {
+    "manifest.json": {
+      "size": 665189,
+      "modified_secs": 1781717621
+    },
+    "semantic_manifest.json": {
+      "size": 253,
+      "modified_secs": 1781717621
+    },
+    "run_results.json": {
+      "size": 2353,
+      "modified_secs": 1781717621
+    }
+  },
+  "write_source": "JsonIngest",
+  "context_dir": null,
+  "context_fingerprints": {}
+}

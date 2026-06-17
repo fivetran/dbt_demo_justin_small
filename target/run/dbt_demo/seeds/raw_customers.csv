@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table JUSTIN_SMALL.dbt_demo.raw_customers (customer_id integer,first_name text,last_name text,email text,country text,created_at date)
+  ;
+    -- dbt seed --
+    
+            insert into JUSTIN_SMALL.dbt_demo.raw_customers (customer_id, first_name, last_name, email, country, created_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

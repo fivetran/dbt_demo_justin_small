@@ -1,0 +1,6 @@
+promo_id,code,discount_pct,start_date,end_date,is_active
+1,SUMMER10,10,2023-06-01,2023-08-31,false
+2,WELCOME20,20,2023-01-01,2023-12-31,true
+3,FITNESS15,15,2023-03-01,2023-05-31,false
+4,TECH5,5,2023-06-15,2023-07-15,false
+5,FALL25,25,2023-09-01,2023-11-30,true

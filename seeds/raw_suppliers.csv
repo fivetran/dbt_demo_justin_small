@@ -1,0 +1,11 @@
+supplier_id,supplier_name,country,contact_email,product_id
+1,TechWorld Ltd,CN,contact@techworld.com,1
+2,ActiveGear Co,US,sales@activegear.com,2
+3,BrewMaster Inc,DE,info@brewmaster.com,3
+4,StridePro,US,orders@stridepro.com,4
+5,LumiDesigns,TW,hello@lumidesigns.com,5
+6,NutriSource,US,supply@nutrisource.com,6
+7,KeyCraft GmbH,DE,b2b@keycraft.de,7
+8,HydroFlow,US,wholesale@hydroflow.com,8
+9,PaperCo,JP,export@paperco.jp,9
+10,SmartTech Asia,KR,partners@smarttech.kr,10

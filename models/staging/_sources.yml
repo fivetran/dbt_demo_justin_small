@@ -1,0 +1,54 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw seed data loaded by dbt seeds (simulates source tables from Fivetran).
+    schema: dbt_demo
+    tables:
+      - name: raw_customers
+        description: One row per customer signup.
+        columns:
+          - name: customer_id
+            description: Primary key.
+            data_tests:
+              - unique
+              - not_null
+          - name: email
+            data_tests:
+              - unique
+              - not_null
+
+      - name: raw_products
+        description: Product catalog.
+        columns:
+          - name: product_id
+            data_tests:
+              - unique
+              - not_null
+
+      - name: raw_orders
+        description: One row per order line.
+        columns:
+          - name: order_id
+            data_tests:
+              - unique
+              - not_null
+          - name: status
+            data_tests:
+              - accepted_values:
+                  values: ['completed', 'returned', 'pending', 'cancelled']
+
+      - name: raw_reviews
+        description: Product reviews submitted by customers.
+        columns:
+          - name: review_id
+            data_tests:
+              - unique
+              - not_null
+          - name: product_id
+            data_tests:
+              - not_null
+          - name: rating
+            data_tests:
+              - accepted_values:
+                  values: [1, 2, 3, 4, 5]

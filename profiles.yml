@@ -1,0 +1,14 @@
+dbt_demo:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: a3209653506471-sales_eng_demo
+      user: JUSTIN.SMALL@FIVETRAN.COM
+      private_key_path: /Users/fivetran/Documents/Fivetran/rsa_key.p8
+      private_key_passphrase: fivetran
+      role: SALES_ENGINEERING
+      warehouse: DEFAULT
+      database: JUSTIN_SMALL
+      schema: dbt_demo
+      threads: 4
