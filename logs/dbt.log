@@ -19650,3 +19650,101 @@ end;$$
 {"data": {"kwargs": "{'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b133cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c182d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a30e940>]}"}, "info": {"category": "", "code": "Z040", "extra": {}, "invocation_id": "e468354c-5b3c-475c-8324-69d4e28ed78d", "level": "debug", "msg": "Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b133cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c182d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a30e940>]}", "name": "SendingEvent", "pid": 11949, "thread": "MainThread", "ts": "2026-06-17T17:33:41.980210Z"}}
 {"data": {}, "info": {"category": "", "code": "Z042", "extra": {}, "invocation_id": "e468354c-5b3c-475c-8324-69d4e28ed78d", "level": "debug", "msg": "Flushing usage events", "name": "FlushEvents", "pid": 11949, "thread": "MainThread", "ts": "2026-06-17T17:33:41.980446Z"}}
 {"data": {}, "info": {"category": "", "code": "Z043", "extra": {}, "invocation_id": "e468354c-5b3c-475c-8324-69d4e28ed78d", "level": "debug", "msg": "An error was encountered while trying to flush usage events", "name": "FlushEventsFailure", "pid": 11949, "thread": "MainThread", "ts": "2026-06-17T17:33:42.272062Z"}}
+==================== 2026-06-29T17:50:08.222047Z | 019f1480-b953-7c21-a98a-e96d08fd480f ====================
+17:50:08.224498 [info ]: dbt-fusion 2.0.0-preview.178
+17:50:08.227206 [info ]: Started loading project
+17:50:08.243151 [info ]: Loading profiles.yml
+17:50:08.381157 [debug]:    Started loading packages
+17:50:08.388441 [debug]:     Loaded [  0.01s] packages
+17:50:08.392422 [info ]: Finished loading project [  0.17s]
+17:50:08.395651 [info ]: Started parsing
+17:50:08.428508 [debug]: Finished parsing models/audit/_audit.yml [  0.01s]
+17:50:08.428957 [debug]: Finished parsing models/marts/_marts.yml [  0.00s]
+17:50:08.429265 [debug]: Finished parsing models/staging/_sources.yml [  0.00s]
+17:50:08.429513 [debug]: Finished parsing models/staging/_staging.yml [  0.00s]
+17:50:08.436385 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/_sources.yml:39:27
+17:50:08.437388 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/_sources.yml:54:27
+17:50:08.446514 [debug]: Finished parsing models/audit/fct_orders_snowflake_daily_checksums.sql [  0.00s]
+17:50:08.446819 [debug]: Finished parsing models/marts/dim_customers.sql [  0.00s]
+17:50:08.447028 [debug]: Finished parsing models/marts/dim_products.sql [  0.00s]
+17:50:08.447270 [debug]: Finished parsing models/marts/fct_orders.sql [  0.00s]
+17:50:08.447538 [debug]: Finished parsing models/marts/top_product_reviews.sql [  0.00s]
+17:50:08.447774 [debug]: Finished parsing models/staging/stg_customers.sql [  0.00s]
+17:50:08.448132 [debug]: Finished parsing models/staging/stg_orders.sql [  0.00s]
+17:50:08.448401 [debug]: Finished parsing models/staging/stg_products.sql [  0.00s]
+17:50:08.448744 [debug]: Finished parsing models/staging/stg_reviews.sql [  0.00s]
+17:50:08.451033 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["key_range_end", "key_range_start", "partition_date"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/audit/_audit.yml:36:26
+17:50:08.453078 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/_staging.yml:38:23
+17:50:08.454092 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/_staging.yml:54:23
+17:50:08.454858 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_marts.yml:58:23
+17:50:08.455231 [error]: [DbtYamlValidationError (dbt1159)]: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/_marts.yml:62:23
+17:50:08.457038 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_products_product_id.sql [  0.00s]
+17:50:08.457140 [debug]: Finished parsing target/generic_tests/source_unique_raw_raw_customers_customer_id.sql [  0.00s]
+17:50:08.457153 [debug]: Finished parsing target/generic_tests/unique_dim_products_product_id.sql [  0.00s]
+17:50:08.457164 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_reviews_review_id.sql [  0.00s]
+17:50:08.457201 [debug]: Finished parsing target/generic_tests/accepted_values_top_product_re_7ecfab26bf10b493d6ee1dae5ebf982a.sql [  0.00s]
+17:50:08.457213 [debug]: Finished parsing target/generic_tests/not_null_stg_reviews_customer_id.sql [  0.00s]
+17:50:08.457215 [debug]: Finished parsing target/generic_tests/not_null_stg_customers_created_at.sql [  0.00s]
+17:50:08.457216 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_product_id.sql [  0.00s]
+17:50:08.457311 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_reviews_product_id.sql [  0.00s]
+17:50:08.457407 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_customers_customer_id.sql [  0.00s]
+17:50:08.457420 [debug]: Finished parsing target/generic_tests/unique_dim_customers_customer_id.sql [  0.00s]
+17:50:08.457481 [debug]: Finished parsing target/generic_tests/not_null_dim_products_product_id.sql [  0.00s]
+17:50:08.457527 [debug]: Finished parsing target/generic_tests/accepted_values_top_product_reviews_rating__1__2__3__4__5.sql [  0.00s]
+17:50:08.457543 [debug]: Finished parsing target/generic_tests/unique_stg_customers_customer_id.sql [  0.00s]
+17:50:08.457561 [debug]: Finished parsing target/generic_tests/accepted_values_stg_orders_9db89bf4fec2ea056c467ba9d14dc0cf.sql [  0.00s]
+17:50:08.457562 [debug]: Finished parsing target/generic_tests/not_null_stg_reviews_order_id.sql [  0.00s]
+17:50:08.457605 [debug]: Finished parsing target/generic_tests/source_accepted_values_raw_raw_reviews_rating__1__2__3__4__5.sql [  0.00s]
+17:50:08.457675 [debug]: Finished parsing target/generic_tests/source_unique_raw_raw_customers_email.sql [  0.00s]
+17:50:08.457682 [debug]: Finished parsing target/generic_tests/not_null_dim_customers_customer_id.sql [  0.00s]
+17:50:08.457761 [debug]: Finished parsing target/generic_tests/not_null_dim_products_product_name.sql [  0.00s]
+17:50:08.457773 [debug]: Finished parsing target/generic_tests/unique_top_product_reviews_review_id.sql [  0.00s]
+17:50:08.457882 [debug]: Finished parsing target/generic_tests/unique_stg_products_product_id.sql [  0.00s]
+17:50:08.457887 [debug]: Finished parsing target/generic_tests/source_unique_raw_raw_reviews_review_id.sql [  0.00s]
+17:50:08.457906 [debug]: Finished parsing target/generic_tests/not_null_stg_customers_customer_id.sql [  0.00s]
+17:50:08.457907 [debug]: Finished parsing target/generic_tests/not_null_stg_reviews_product_id.sql [  0.00s]
+17:50:08.457950 [debug]: Finished parsing target/generic_tests/not_null_dim_customers_full_name.sql [  0.00s]
+17:50:08.457993 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_customers_email.sql [  0.00s]
+17:50:08.458020 [debug]: Finished parsing target/generic_tests/unique_fct_orders_order_id.sql [  0.00s]
+17:50:08.458033 [debug]: Finished parsing target/generic_tests/not_null_top_product_reviews_review_id.sql [  0.00s]
+17:50:08.458087 [debug]: Finished parsing target/generic_tests/not_null_stg_products_product_id.sql [  0.00s]
+17:50:08.458148 [debug]: Finished parsing target/generic_tests/unique_stg_customers_email.sql [  0.00s]
+17:50:08.458155 [debug]: Finished parsing target/generic_tests/accepted_values_stg_reviews_rating__1__2__3__4__5.sql [  0.00s]
+17:50:08.459703 [debug]: Finished parsing target/generic_tests/not_null_stg_reviews_review_date.sql [  0.00s]
+17:50:08.459769 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_order_id.sql [  0.00s]
+17:50:08.459799 [debug]: Finished parsing target/generic_tests/source_unique_raw_raw_orders_order_id.sql [  0.00s]
+17:50:08.459856 [debug]: Finished parsing target/generic_tests/not_null_stg_customers_email.sql [  0.00s]
+17:50:08.459882 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_snowflake_daily_checksums_key_range_start.sql [  0.00s]
+17:50:08.459891 [debug]: Finished parsing target/generic_tests/unique_stg_reviews_review_id.sql [  0.00s]
+17:50:08.459950 [debug]: Finished parsing target/generic_tests/unique_daily_key_range_checksu_b0d1544e107bde78b41af4fb0ee147d0.sql [  0.00s]
+17:50:08.460012 [debug]: Finished parsing target/generic_tests/source_not_null_raw_raw_orders_order_id.sql [  0.00s]
+17:50:08.460050 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_customer_id.sql [  0.00s]
+17:50:08.460146 [debug]: Finished parsing target/generic_tests/not_null_stg_reviews_review_id.sql [  0.00s]
+17:50:08.460210 [debug]: Finished parsing target/generic_tests/source_accepted_values_raw_raw_3e335662d95cd3bb15a84e40befce17d.sql [  0.00s]
+17:50:08.460232 [debug]: Finished parsing target/generic_tests/unique_stg_orders_order_id.sql [  0.00s]
+17:50:08.460235 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_snowflake_daily_checksums_partition_date.sql [  0.00s]
+17:50:08.460248 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_snowflake_daily_checksums_checksum_sha256.sql [  0.00s]
+17:50:08.460310 [debug]: Finished parsing target/generic_tests/not_null_top_product_reviews_product_id.sql [  0.00s]
+17:50:08.460391 [debug]: Finished parsing target/generic_tests/source_unique_raw_raw_products_product_id.sql [  0.00s]
+17:50:08.460475 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_snowflake_daily_checksums_row_count.sql [  0.00s]
+17:50:08.460489 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_order_id.sql [  0.00s]
+17:50:08.460533 [debug]: Finished parsing target/generic_tests/not_null_fct_orders_snowflake_daily_checksums_key_range_end.sql [  0.00s]
+17:50:08.460654 [debug]: Finished parsing target/generic_tests/not_null_stg_customers_country.sql [  0.00s]
+17:50:08.468979 [info ]: Finished parsing [  0.07s]
+17:50:08.772856 [info ]: New version available 2.0.0-preview.193 (run `dbt system update`)
+17:50:08.955125 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+17:50:08.955125 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 7 errors for target 'dev' [733ms]
+==================== 2026-06-29T17:50:23.236385Z | 019f1480-f3fb-7892-8d46-121dc32bfc4c ====================
+17:50:26.625912 [info ]: 
+==================== Execution Summary =====================
+Finished 'system' successfully [3.4s]
+==================== 2026-06-29T17:50:33.815138Z | 019f1481-1d53-7793-8219-b5cd9b4754d2 ====================

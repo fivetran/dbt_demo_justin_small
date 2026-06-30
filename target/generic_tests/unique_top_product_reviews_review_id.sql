@@ -1,0 +1,1 @@
+{{ test_unique(column_name="review_id", model=get_where_subquery(ref('top_product_reviews'))) }}

@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="key_range_end", model=get_where_subquery(ref('fct_orders_snowflake_daily_checksums'))) }}

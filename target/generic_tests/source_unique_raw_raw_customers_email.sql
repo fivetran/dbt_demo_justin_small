@@ -1,0 +1,1 @@
+{{ test_unique(column_name="email", model=get_where_subquery(source('raw', 'raw_customers'))) }}

@@ -1,0 +1,1 @@
+{{ test_unique_daily_key_range_checksum_slice(key_range_end="key_range_end", key_range_start="key_range_start", model=get_where_subquery(ref('fct_orders_snowflake_daily_checksums')), partition_date="partition_date") }}

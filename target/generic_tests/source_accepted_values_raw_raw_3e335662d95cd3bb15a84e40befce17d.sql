@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="status", model=get_where_subquery(source('raw', 'raw_orders')), values=["completed","returned","pending","cancelled"]) }}
